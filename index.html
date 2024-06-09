@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <script src="renan.js"></script>
+  <link rel="shortcut icon" href="4793339.png" type="image/x-icon">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <title>Atena Calc</title>
+</head>
+<body>
+  <!-- CABEÇALHO -->
+  <header class="cabecalho" id="cabecalho">
+    <nav class="container">
+      <a href="/" class="logo">
+        <b></b><span><br>Atena Calc</span></b>
+      </a>
+      <div class="menu" id="menu">
+        <ul class="lista">
+          <li class="item"><a href="#inicio" class="link">Home</a></li>
+          <li class="item"><a href="#inicio" class="link">Início</a></li>
+          <li class="item"><a href="#bases" class="link">Bases Numéricas</a></li>
+          <li class="item"><a href="#registradores" class="link">Calculadora de Registradores</a></li>
+          <li class="item"><a href="#texto-binario" class="link">Conversor de Texto para Binário</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="principal">
+    <!-- INÍCIO -->
+    <section class="inicio" id="inicio">
+      <div class="container-inicio">
+        <div class="dados-inicio">
+          <h1 class="titulo">INFORMÁTICA</h1>
+          <h2 class="fisica">Entre no incrivel mundo da computação.</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bases Numéricas -->
+
+    <section class="app section container-app" id="bases"> 
+      <div class="container bd-grid">
+        <div class="dados">
+          <span class="titulo">Bases Numéricas</span>
+          <h2 class="titulo-secao inicial">Conversão de Bases Numéricas</h2>
+          <p class="descricao">
+            As bases numéricas são fundamentais para a informática, pois representam os diferentes sistemas numéricos usados pelos computadores e dispositivos eletrônicos. As principais bases numéricas incluem:
+          </p>
+          <ul class="descricao">
+            <li><strong>Binário (Base 2):</strong> Utiliza apenas os dígitos 0 e 1. É a linguagem nativa dos computadores.</li>
+            <li><strong>Decimal (Base 10):</strong> Sistema numérico mais utilizado pelos seres humanos, utilizando os dígitos de 0 a 9.</li>
+            <li><strong>Octal (Base 8):</strong> Utiliza os dígitos de 0 a 7. Foi amplamente usado em sistemas mais antigos.</li>
+            <li><strong>Hexadecimal (Base 16):</strong> Utiliza os dígitos de 0 a 9 e as letras de A a F. É muito usado em programação e eletrônica.</li>
+          </ul>
+          <p class="descricao">
+            Entender e converter entre essas bases é crucial para a programação, engenharia de software e eletrônica digital.
+          </p>
+        </div>
+        <iframe src="https://www.youtube.com/embed/J5q7s7l2EuI" frameborder="0" class="escala"></iframe>
+      </div> 
+
+      <!-- Calculadora -->
+
+      <div class="container" id="calculadoraBasesNumericas"> 
+        <h1>Calculadora de Bases Numéricas</h1>
+        <div class="grupo-formulario">
+          <label for="numero">Número:</label>
+          <input type="text" id="numero" placeholder="Insira o número">
+        </div>
+        <div class="grupo-formulario">
+          <label for="deBase">De:</label>
+          <select id="deBase">
+            <option value="binario">Binário</option>
+            <option value="decimal">Decimal</option>
+            <option value="octal">Octal</option>
+            <option value="hexadecimal">Hexadecimal</option>
+          </select>
+        </div>
+        <div class="grupo-formulario">
+          <label for="paraBase">Para:</label>
+          <select id="paraBase">
+            <option value="binario">Binário</option>
+            <option value="decimal">Decimal</option>
+            <option value="octal">Octal</option>
+            <option value="hexadecimal">Hexadecimal</option>
+          </select>
+        </div>
+        <button onclick="converterBase()">Calcular</button>
+        <div class="resultadoBases hidden" id="resultadoBases"></div>
+      </div>
+    </section>
+<!-- Calculadora de Registradores -->
+<section class="app section container-app" id="registradores">
+  <div class="container bd-grid">
+    <div class="dados">
+      <span class="titulo">Calculadora de Registradores</span>
+      <h2 class="titulo-secao inicial">Calculadora de Resistores</h2>
+      <p class="descricao">
+        Os resistores são componentes eletrônicos que limitam a passagem de corrente elétrica. Os valores dos resistores são indicados por faixas de cores. Esta calculadora ajuda a determinar o valor do resistor com base nas cores das faixas.
+      </p>
+    </div>
+    <iframe src="https://www.youtube.com/embed/76M_eZe-XoE?start=241" frameborder="0" class="escala"></iframe>
+   
+    
+  </div>
+  <div class="container-central">
+    <form>
+      <div class="bloco">
+        <p>
+          <label for="faixa1" class="val"> Faixa 1: </label>
+          <select name="cor1" id="faixa1" onchange="mudarCor()" value="Selecione a cor">
+            <option value="0"> Preto </option>
+            <option value="1"> Marrom </option>
+            <option value="2"> Vermelho </option>
+            <option value="3"> Laranja </option>
+            <option value="4"> Amarelo </option>
+            <option value="5"> Verde </option>
+            <option value="6"> Azul </option>
+            <option value="7"> Violeta </option>
+            <option value="8"> Cinza </option>
+            <option value="9"> Branco </option>
+          </select>
+          <div id="Color1"></div>
+        </p>
+      </div>
+      <div class="bloco">
+        <p>
+          <label for="faixa2" class="val"> Faixa 2: </label>
+          <select name="cor1" id="faixa2" onchange="mudarCor()">
+            <option value="0"> Preto </option>
+            <option value="1"> Marrom </option>
+            <option value="2"> Vermelho </option>
+            <option value="3"> Laranja </option>
+            <option value="4"> Amarelo </option>
+            <option value="5"> Verde </option>
+            <option value="6"> Azul </option>
+            <option value="7"> Violeta </option>
+            <option value="8"> Cinza </option>
+            <option value="9"> Branco </option>
+          </select>
+          <div id="Color2"></div>
+        </p>
+      </div>
+      <div class="bloco">
+        <p>
+          <label for="faixa3" class="val"> Faixa 3: </label>
+          <select name="cor1" id="faixa3" onchange="mudarCor()">
+            <option value="1"> Preto </option>
+            <option value="10"> Marrom </option>
+            <option value="100"> Vermelho </option>
+            <option value="1000"> Laranja </option>
+            <option value="10000"> Amarelo </option>
+            <option value="100000"> Verde </option>
+            <option value="1000000"> Azul </option>
+            <option value="10000000"> Violeta </option>
+          </select>
+          <div id="Color3"></div>
+        </p>
+      </div>
+      <div class="bloco">
+        <p>
+          <label for="faixa4" class="val"> Tolerância: </label>
+          <select name="cor1" id="faixa4" onchange="mudarCor()">
+            <option value="5"> Dourado </option>
+            <option value="10"> Prata </option>
+          </select>
+          <div id="Color4"></div>
+        </p>
+      </div>
+      <section>
+        <div class="val"> Valor Total: </div>
+        <div id="resultado"></div>
+        <button type="button" onclick="valorTotal()" class="button"> Calcular </button>
+      </section>
+    </form>
+  </div>
+</section>
+      <!-- Conversor de Texto para Binário -->
+  
+      <section class="app section container-app" id="texto-binario"> 
+        <div class="container bd-grid">
+          <div class="dados">
+            <span class="titulo">Conversor</span>
+            <h2 class="titulo-secao inicial">Texto para Binário</h2>
+            <p class="descricao">
+              A conversão de texto para binário é uma técnica fundamental na computação, onde cada caractere de texto é representado por uma sequência de bits (0s e 1s). Este processo é essencial para o armazenamento, processamento e transmissão de dados nos sistemas digitais. Por exemplo, a letra 'A' é representada pelo binário '01000001' no código ASCII.
+            </p>
+            <p class="descricao">
+              Entender como converter texto para binário é importante para programadores, engenheiros de computação e todos que trabalham com sistemas de comunicação digital.
+            </p>
+          </div>
+          <iframe src="https://www.youtube.com/embed/Y0dTHv65yxU" frameborder="0" class="escala"></iframe>
+        </div> 
+  
+        <!-- Calculadora -->
+  
+        <div class="deslo">
+          <h1>Conversor de Texto para Binário</h1>
+          <label for="texto">Texto:</label>
+          <input type="text" id="texto" placeholder="Insira o texto"><br><br>
+          <button onclick="converterTextoParaBinario()">Converter</button><br><br>
+          <div class="resultadoBin hidden" id="resultadoBin"></div>
+        </div>
+      </section>
+  
+      <!-- CONTATO -->
+      <section class="contato section container-contato" id="contato">
+        <div class="container bd-grid">
+          <div class="dados">
+            <span class="subtitulo inicial"></span>
+            <h2 class="titulo inicial">Gostou?</h2>
+            <p class="descricao">Venha conferir nosso Instagram. Iremos trazer mais novidades em breve. Bons estudos!</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  
+    <footer class="rodape section container-rodape">
+      <div class="container bd-grid">
+        <div class="conteudo">
+          <b class="logo">Atena<span>Calc</span></b>
+          <span class="descricao">O melhor serviço pra você.</span>
+          <div class="social">
+            <a href="https://www.instagram.com/atenacalc_?igsh=MThnMGZiZHU1d2pqeA==" class="social-link" target="_blank"><i class="bx bxl-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+      <p class="copia">
+        &#169; Feito em 2024, por
+        <a href="" class="link">Renan, Vini, Natã e Guilherme</a>
+      </p>
+    </footer>
+  
+  </body>
+  </html>
+  
